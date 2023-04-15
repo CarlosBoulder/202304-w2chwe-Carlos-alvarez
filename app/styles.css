@@ -16,14 +16,23 @@ p {
 }
 
 .main-container {
-  background-color: bisque;
+  background-color: rgb(250, 250, 250);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .board {
-  width: 100px;
-  height: 100px;
-  background-color: aliceblue;
+  background-color: violet;
+}
+
+.cell {
+  height: 15px;
+  width: 15px;
+  border: 0.5px solid #000;
+  background-color: #fff;
+}
+
+.cellAlive {
+  background-color: #000;
 }
