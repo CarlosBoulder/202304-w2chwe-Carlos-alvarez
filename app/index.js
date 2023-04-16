@@ -1,4 +1,4 @@
-import updateMatrix from "./gameLogic.js";
+import { updateMatrix } from "./gameLogic.js";
 import createTable from "./createTable.js";
 
 let initialMatrix = [
