@@ -29,8 +29,8 @@ p {
 }
 
 .cell {
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   border: 0.5px solid #faf6f6;
   background-color: #747272;
 }
@@ -46,7 +46,4 @@ p {
   font-family: inherit;
   border-radius: 12px;
   border: none;
-}
-
-cellspacing {
 }
