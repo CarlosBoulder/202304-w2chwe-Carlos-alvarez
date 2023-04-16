@@ -1,5 +1,4 @@
-import { updateMatrix } from "./gameLogic";
-import { updateStatus } from "./gameLogic.js";
+import { updateStatus, updateMatrix } from "./gameLogic.js";
 
 let initialMatrix = [
   [0, 0, 0, 0, 0, 0, 0, 0],
