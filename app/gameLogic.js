@@ -23,16 +23,6 @@ const updateStatus = (x, y, originalMatrix) => {
     }
     return myState;
   }
-
-  /*if (myState === 1 && (aliveNeighbors < 2 || aliveNeighbors > 3)) {
-    myState = 0;
-    return myState;
-  }
-
-  if (myState === 0 && aliveNeighbors === 3) {
-    myState = 1;
-    return myState;
-  }*/
 };
 
 const countAliveNeighbors = (x, y, matrix) => {
