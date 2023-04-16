@@ -1,27 +1,36 @@
+import updateMatrix from "./gameLogic.js";
+import createTable from "./createTable.js";
+
 let matrix = [
-  [0, 0, 0, 0],
-  [0, 1, 1, 0],
-  [0, 1, 0, 0],
-  [0, 0, 1, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 1, 0, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 let boardContainer = document.querySelector(".board");
-console.log(boardContainer);
-let tableGame = document.createElement("table");
+let initialTable = createTable(matrix);
 
-for (let x = 0; x < matrix.length; x++) {
-  let tr = document.createElement("tr");
-  for (let y = 0; y < matrix[x].length; y++) {
-    let td = document.createElement("td");
-    td.setAttribute("class", "cell");
-    if (matrix[x][y] === 1) {
-      td.setAttribute("class", "cellAlive");
-    }
-    tr.appendChild(td);
-  }
+initialTable.setAttribute("cellspacing", "0");
+boardContainer.appendChild(initialTable);
 
-  tableGame.appendChild(tr);
-}
+const handleStartButton = () => {
+  let updatedMatrix = updateMatrix(matrix);
+  let newTableGame = createTable(updatedMatrix);
 
-tableGame.setAttribute("cellspacing", "0");
-boardContainer.appendChild(tableGame);
+  boardContainer.replaceChild(newTableGame, initialTable);
+  initialTable = newTableGame;
+  matrix = updatedMatrix;
+};
+
+const registerEventListeners = () => {
+  const startButton = document.querySelector(".start-button");
+  startButton.addEventListener("click", () => {
+    handleStartButton();
+  });
+};
+registerEventListeners();
