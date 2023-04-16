@@ -22,10 +22,6 @@ p {
   align-items: center;
 }
 
-.board {
-  background-color: violet;
-}
-
 .cell {
   height: 15px;
   width: 15px;
