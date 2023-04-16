@@ -39,9 +39,6 @@ p {
   background-color: #e1fa06;
 }
 
-.buttons {
-}
-
 .button {
   padding: 10px 15px;
   background-color: #747272;
@@ -49,4 +46,7 @@ p {
   font-family: inherit;
   border-radius: 12px;
   border: none;
+}
+
+cellspacing {
 }
