@@ -1,4 +1,4 @@
-const updateMatrix = (originalMatrix) => {
+export const updateMatrix = (originalMatrix) => {
   const updatedMatrix = structuredClone(originalMatrix);
   for (let x = 1; x < originalMatrix.length - 1; x++) {
     for (let y = 1; y < originalMatrix[x].length - 1; y++) {
@@ -8,7 +8,7 @@ const updateMatrix = (originalMatrix) => {
   return updatedMatrix;
 };
 
-const updateStatus = (x, y, originalMatrix) => {
+export const updateStatus = (x, y, originalMatrix) => {
   let myState = originalMatrix[x][y];
 
   let aliveNeighbors = countAliveNeighbors(x, y, originalMatrix);
@@ -46,5 +46,3 @@ const countAliveNeighbors = (x, y, matrix) => {
   }
   return accumulator;
 };
-
-export default updateMatrix;
