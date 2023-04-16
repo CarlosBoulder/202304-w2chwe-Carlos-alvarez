@@ -17,7 +17,6 @@ let matrixToReset = initialMatrix;
 let boardContainer = document.querySelector(".board");
 let initialTable = createTable(initialMatrix);
 
-initialTable.setAttribute("cellspacing", "0");
 boardContainer.appendChild(initialTable);
 
 const handleStartButton = () => {
@@ -32,7 +31,6 @@ const handleStartButton = () => {
 const handleResetButton = () => {
   let resetTable = createTable(matrixToReset);
 
-  resetTable.setAttribute("cellspacing", "0");
   boardContainer.replaceChild(resetTable, initialTable);
   initialTable = resetTable;
   initialMatrix = matrixToReset;
